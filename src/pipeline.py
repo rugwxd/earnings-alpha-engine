@@ -31,14 +31,14 @@ def run_pipeline():
     from src.feature_engineer import build_features
     build_features()
 
-    # Stage 4: Model Training
-    print("\n[Stage 4/5] Training XGBoost models...")
-    from src.model_trainer import train_model
-    train_model("target_5d")
-    train_model("target_1d")
+    # Stage 4: Walk-Forward Model Training
+    print("\n[Stage 4/5] Training XGBoost (walk-forward)...")
+    from src.model_trainer import walk_forward
+    walk_forward("target_5d")
+    walk_forward("target_1d")
 
     # Stage 5: Backtest
-    print("\n[Stage 5/5] Running backtest...")
+    print("\n[Stage 5/5] Running backtest on OOS predictions...")
     from src.backtester import run_backtest
     results_5d = run_backtest("target_5d", "return_5d")
     results_1d = run_backtest("target_1d", "return_1d")
@@ -46,8 +46,10 @@ def run_pipeline():
     print("\n" + "=" * 60)
     print("  PIPELINE COMPLETE")
     print("=" * 60)
-    print(f"  5-day signal: {results_5d['excess_return']:+.1%} excess, Sharpe {results_5d['sharpe']:.2f}")
-    print(f"  1-day signal: {results_1d['excess_return']:+.1%} excess, Sharpe {results_1d['sharpe']:.2f}")
+    print(f"  5-day: {results_5d['n_trades']} OOS trades, "
+          f"{results_5d['excess_return']:+.1%} excess, Sharpe {results_5d['sharpe']:.2f}")
+    print(f"  1-day: {results_1d['n_trades']} OOS trades, "
+          f"{results_1d['excess_return']:+.1%} excess, Sharpe {results_1d['sharpe']:.2f}")
     print("=" * 60)
 
 

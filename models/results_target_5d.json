@@ -1,26 +1,114 @@
 {
   "target": "target_5d",
-  "train_size": 64,
-  "test_size": 17,
-  "cv_accuracy_mean": 0.5333333333333333,
-  "cv_accuracy_std": 0.06236095644623235,
-  "holdout_accuracy": 0.47058823529411764,
-  "holdout_precision": 0.5,
-  "holdout_recall": 0.5555555555555556,
-  "holdout_f1": 0.5263157894736842,
-  "holdout_auc": 0.5833333333333333,
+  "validation": "expanding_window_walk_forward",
+  "min_train_quarters": 6,
+  "total_oos_predictions": 71,
+  "n_folds": 13,
+  "oos_accuracy": 0.6056338028169014,
+  "oos_precision": 0.6226415094339622,
+  "oos_recall": 0.8048780487804879,
+  "oos_f1": 0.7021276595744681,
+  "oos_auc": 0.580081300813008,
+  "per_fold": [
+    {
+      "fold": 1,
+      "test_quarter": "2020-Q3",
+      "train_size": 18,
+      "test_size": 4,
+      "accuracy": 0.75
+    },
+    {
+      "fold": 2,
+      "test_quarter": "2020-Q4",
+      "train_size": 22,
+      "test_size": 9,
+      "accuracy": 0.5555555555555556
+    },
+    {
+      "fold": 3,
+      "test_quarter": "2021-Q1",
+      "train_size": 31,
+      "test_size": 9,
+      "accuracy": 0.6666666666666666
+    },
+    {
+      "fold": 4,
+      "test_quarter": "2021-Q2",
+      "train_size": 40,
+      "test_size": 8,
+      "accuracy": 0.375
+    },
+    {
+      "fold": 5,
+      "test_quarter": "2021-Q3",
+      "train_size": 48,
+      "test_size": 8,
+      "accuracy": 0.625
+    },
+    {
+      "fold": 6,
+      "test_quarter": "2021-Q4",
+      "train_size": 56,
+      "test_size": 6,
+      "accuracy": 0.5
+    },
+    {
+      "fold": 7,
+      "test_quarter": "2022-Q1",
+      "train_size": 62,
+      "test_size": 7,
+      "accuracy": 0.8571428571428571
+    },
+    {
+      "fold": 8,
+      "test_quarter": "2022-Q2",
+      "train_size": 69,
+      "test_size": 7,
+      "accuracy": 0.7142857142857143
+    },
+    {
+      "fold": 9,
+      "test_quarter": "2022-Q3",
+      "train_size": 76,
+      "test_size": 5,
+      "accuracy": 0.6
+    },
+    {
+      "fold": 10,
+      "test_quarter": "2022-Q4",
+      "train_size": 81,
+      "test_size": 3,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "fold": 11,
+      "test_quarter": "2023-Q1",
+      "train_size": 84,
+      "test_size": 3,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "fold": 12,
+      "test_quarter": "2023-Q2",
+      "train_size": 87,
+      "test_size": 1,
+      "accuracy": 1.0
+    },
+    {
+      "fold": 13,
+      "test_quarter": "2023-Q3",
+      "train_size": 88,
+      "test_size": 1,
+      "accuracy": 1.0
+    }
+  ],
   "feature_importances": {
-    "pre_earnings_vol": 0.12104455381631851,
-    "sentiment_spread": 0.11044780164957047,
-    "pre_earnings_momentum": 0.10995829105377197,
-    "pct_positive": 0.08922287821769714,
-    "sentiment_neg_std": 0.08748023211956024,
-    "num_qa_pairs": 0.08400393277406693,
-    "sentiment_neu_mean": 0.0813986212015152,
-    "sentiment_neg_mean": 0.07668256014585495,
-    "sentiment_pos_std": 0.07359480112791061,
-    "overnight_gap": 0.0715726837515831,
-    "sentiment_pos_mean": 0.05222800001502037,
-    "pct_negative": 0.042365629225969315
+    "pre_earnings_momentum": 0.1979789286851883,
+    "pre_earnings_vol": 0.19677236676216125,
+    "pct_positive": 0.14797188341617584,
+    "pct_negative": 0.13203419744968414,
+    "sentiment_neg_mean": 0.1202821284532547,
+    "sentiment_spread": 0.11085382103919983,
+    "sentiment_pos_mean": 0.09410663694143295
   }
 }
