@@ -1,0 +1,26 @@
+{
+  "target": "target_1d",
+  "train_size": 64,
+  "test_size": 17,
+  "cv_accuracy_mean": 0.5833333333333334,
+  "cv_accuracy_std": 0.1312334645668635,
+  "holdout_accuracy": 0.5882352941176471,
+  "holdout_precision": 0.5714285714285714,
+  "holdout_recall": 0.5,
+  "holdout_f1": 0.5333333333333333,
+  "holdout_auc": 0.5555555555555556,
+  "feature_importances": {
+    "num_qa_pairs": 0.11061584949493408,
+    "sentiment_spread": 0.0978822410106659,
+    "sentiment_pos_mean": 0.09738193452358246,
+    "sentiment_neg_mean": 0.09008391201496124,
+    "pre_earnings_vol": 0.0891566127538681,
+    "pct_negative": 0.08898009359836578,
+    "pct_positive": 0.08819575607776642,
+    "sentiment_pos_std": 0.08819518983364105,
+    "sentiment_neg_std": 0.06493827700614929,
+    "overnight_gap": 0.06236639246344566,
+    "pre_earnings_momentum": 0.061164747923612595,
+    "sentiment_neu_mean": 0.061039090156555176
+  }
+}
