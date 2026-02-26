@@ -81,7 +81,7 @@ earnings-alpha-engine/
 
 ```bash
 # Clone the repo
-git clone https://github.com/rugwxd/earnings-alpha-engine.git
+git clone https://github.com/rugwed9/earnings-alpha-engine.git
 cd earnings-alpha-engine
 
 # Create and activate virtual environment
